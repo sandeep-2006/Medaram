@@ -2,218 +2,279 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-const STATS = [
-  { value: '~3 Crore', label: 'Devotees per Festival' },
-  { value: '13th C.',  label: 'Origins in History'    },
-  { value: '4 Days',   label: 'Festival Duration'     },
-  { value: '1998',     label: 'Declared State Festival' },
-];
-
-const EXPLORE = [
-  { to: '/history',    icon: '📜', title: 'History',         desc: 'The legend of Sammakka & Saralamma and the battle against the Kakatiyas'        },
-  { to: '/traditions', icon: '🪘', title: 'Traditions',      desc: 'Sacred rituals, offerings, tribal dances and the Koya way of worship'          },
-  { to: '/gallery',    icon: '🖼️', title: 'Gallery',         desc: 'A visual journey through the worlds largest tribal congregation'              },
-  { to: '/guide',      icon: '🗺️', title: "Visitor's Guide", desc: 'How to reach Medaram, what to carry and tips for a fulfilling pilgrimage'       },
-];
-
-/* Simple intersection-observer hook for fade-in */
 function useFadeIn(ref) {
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    if (!ref.current) return;
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { el.classList.add('visible'); obs.disconnect(); } },
-      { threshold: 0.15 }
+      ([e]) => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.disconnect(); } },
+      { threshold: 0.12 }
     );
-    obs.observe(el);
+    obs.observe(ref.current);
     return () => obs.disconnect();
   }, [ref]);
 }
 
-function FadeSection({ className = '', children }) {
+function Fade({ children, className = '' }) {
   const ref = useRef(null);
   useFadeIn(ref);
   return <div ref={ref} className={`fade-section ${className}`}>{children}</div>;
 }
 
+const STATS = [
+  { value: '~3 Crore',   label: 'Devotees per Jathara',       sub: 'Estimated attendance'    },
+  { value: 'Biennial',   label: 'Held Every Two Years',       sub: 'During Magha full moon'  },
+  { value: '4 Days',     label: 'Festival Duration',          sub: 'Full cycle of rituals'   },
+  { value: '13th Cent.', label: 'Historical Origins',         sub: 'Kakatiya period'         },
+  { value: 'World #1',   label: 'Tribal Congregation',        sub: 'Largest on Earth'        },
+];
+
+const SECTIONS = [
+  {
+    to:    '/history',
+    title: 'History & Legend',
+    desc:  'The story of Sammakka and Saralamma — two revered figures whose courage and sacrifice gave rise to one of India\'s most significant tribal traditions.',
+    icon:  '📜',
+    color: 'blue',
+  },
+  {
+    to:    '/traditions',
+    title: 'Traditions & Rituals',
+    desc:  'Sacred Koya tribal customs, entirely free of Brahminic influence, preserved across centuries by generations of indigenous priests and devotees.',
+    icon:  '🪘',
+    color: 'navy',
+  },
+  {
+    to:    '/gallery',
+    title: 'Photo Gallery',
+    desc:  'A visual record of the Jathara — the sacred altars, the river bathing, the processions, and the extraordinary human gathering in the forest.',
+    icon:  '🖼️',
+    color: 'blue',
+  },
+  {
+    to:    '/guide',
+    title: "Visitor's Guide",
+    desc:  'Practical information for planning your visit — how to reach Medaram, what to bring, government facilities, and important etiquette guidelines.',
+    icon:  '🗺️',
+    color: 'navy',
+  },
+];
+
 export default function Home() {
   return (
     <div className="home page-wrapper">
 
-      {/* ── HERO ───────────────────────────────────────────── */}
-      <section className="home-hero">
+      {/* ── HERO ─────────────────────────────────────────── */}
+      <section className="hero">
         <div className="hero-bg" />
         <div className="hero-overlay" />
-        <div className="hero-particles">
-          {[...Array(12)].map((_, i) => (
-            <span key={i} className="particle" style={{ '--i': i }} />
-          ))}
-        </div>
-        <div className="hero-content">
-          <p className="hero-eyebrow">Asia's Largest Tribal Festival</p>
-          <h1 className="hero-title">
-            <span className="hero-title-top">Medaram</span>
-            <span className="hero-title-main">Jathara</span>
-          </h1>
-          <p className="hero-tagline">
-            Sammakka · Saralamma · Jampanna · Pagididda Raju
-          </p>
-          <p className="hero-desc">
-            Every two years, millions of devotees journey deep into the forests of
-            Telangana to honour two heroic tribal goddesses — a mother and daughter
-            who defied an empire.
-          </p>
-          <div className="hero-actions">
-            <Link to="/history" className="btn-primary">Discover the Legend</Link>
-            <Link to="/guide"   className="btn-ghost">Plan Your Visit</Link>
+        <div className="hero-grid-texture" />
+        <div className="hero-inner container">
+          <div className="hero-content">
+            <span className="hero-eyebrow">
+              Documenting Asia's Largest Tribal Festival
+            </span>
+            <h1 className="hero-title">
+              Sammakka Saralamma<br />
+              <span>Medaram Jathara</span>
+            </h1>
+            <p className="hero-subtitle">
+              Telangana, India &nbsp;·&nbsp; Held biennially in the forests of Mulugu District
+            </p>
+            <p className="hero-desc">
+              A living heritage of the Koya tribe — a sacred biennial gathering that has 
+              drawn devotees from across India for centuries, honouring two remarkable women 
+              whose story of courage and sacrifice remains deeply meaningful to millions of people.
+            </p>
+            <div className="hero-actions">
+              <Link to="/history" className="btn-primary">Explore the History</Link>
+              <Link to="/guide"   className="btn-outline btn-outline--white">Plan Your Visit</Link>
+            </div>
+          </div>
+          <div className="hero-badge-col">
+            <div className="hero-badge">
+              <div className="badge-top">Asia's Largest</div>
+              <div className="badge-main">Tribal Festival</div>
+              <div className="badge-sub">Recognised by Telangana State</div>
+              <div className="badge-year">Est. 13th Century</div>
+            </div>
           </div>
         </div>
-        <div className="hero-scroll-hint">
-          <span>Scroll</span>
-          <span className="scroll-arrow">↓</span>
+        <div className="hero-scroll">
+          <span>Scroll to explore</span>
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+            <path d="M8 4v12M4 12l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
       </section>
 
-      {/* ── STATS ──────────────────────────────────────────── */}
-      <FadeSection className="home-stats">
-        {STATS.map(({ value, label }) => (
-          <div key={label} className="stat-card">
-            <span className="stat-value">{value}</span>
-            <span className="stat-label">{label}</span>
-          </div>
-        ))}
-      </FadeSection>
-
-      {/* ── INTRO ──────────────────────────────────────────── */}
-      <FadeSection className="home-intro container">
-        <div className="intro-text">
-          <span className="section-label">About the Festival</span>
-          <h2 className="section-title">The <span>Kumbh Mela</span> of Telangana</h2>
-          <div className="divider-gold" />
-          <p>
-            The Sammakka Saralamma Jathara — popularly known as the <em>Medaram Jathara</em> — 
-            is the world's single largest tribal religious congregation, held biennially 
-            in the deep forests of the Eturnagaram Wildlife Sanctuary, Mulugu district, Telangana.
-          </p>
-          <p>
-            Rooted in the 13th-century resistance of Koya tribal queen Sammakka and her 
-            daughter Saralamma against the Kakatiya rulers, the festival is a living testament 
-            to courage, sacrifice, and the unbroken spirit of India's tribal communities.
-          </p>
-          <p>
-            With no Vedic or Brahminic influence, all rituals are conducted exclusively by 
-            Koya tribe priests, preserving centuries of indigenous tradition. An estimated 
-            three crore devotees attended the 2026 Maha Jathara, making it second only to 
-            the Kumbh Mela in India's pilgrimage scale.
-          </p>
-          <Link to="/history" className="btn-link">Read the full history →</Link>
+      {/* ── STATS BAR ────────────────────────────────────── */}
+      <Fade>
+        <div className="stats-bar">
+          {STATS.map(s => (
+            <div key={s.label} className="stat">
+              <strong className="stat-value">{s.value}</strong>
+              <span  className="stat-label">{s.label}</span>
+              <span  className="stat-sub">{s.sub}</span>
+            </div>
+          ))}
         </div>
-        <div className="intro-visual">
-          <div className="intro-image-wrap">
-            <div className="intro-img-placeholder">
-              <div className="deity-symbol">
-                <span>🌿</span>
-                <h3>Sammakka & Saralamma</h3>
-                <p>Guardians of the Koya tribe</p>
+      </Fade>
+
+      {/* ── ABOUT ────────────────────────────────────────── */}
+      <Fade className="home-about">
+        <div className="container">
+          <div className="about-grid">
+            <div className="about-text">
+              <span className="label">About This Festival</span>
+              <h2 className="section-title">A Sacred Gathering of<br /><span>Deep Significance</span></h2>
+              <div className="rule" />
+              <p>
+                The Sammakka Saralamma Jathara — widely known as the Medaram Jathara — holds a profound 
+                place in the lives of millions of people across India. Held in a remote forest village in 
+                Mulugu District, Telangana, it is recognised as the world's single largest tribal 
+                religious congregation, drawing an estimated three crore devotees every two years.
+              </p>
+              <p>
+                The festival commemorates Sammakka and Saralamma — a mother and daughter from the 
+                Koya tribe who lived in the 13th century. Their story of standing firmly for justice 
+                and their people, even against great odds, continues to inspire profound devotion. 
+                Their memory is honoured with absolute sincerity by devotees who travel great distances 
+                on foot, often under challenging conditions.
+              </p>
+              <p>
+                What makes the Jathara especially significant is its indigenous character. Every ritual 
+                is conducted solely by Koya tribal priests, making it one of the most authentic 
+                expressions of Adivasi spirituality in India — free from outside religious influence 
+                and shaped entirely by the community it belongs to.
+              </p>
+              <Link to="/history" className="btn-link">
+                Learn the full history <span>→</span>
+              </Link>
+            </div>
+            <div className="about-visual">
+              <div className="about-card-stack">
+                <div className="about-info-card about-info-card--top">
+                  <span className="aic-icon">🌿</span>
+                  <div>
+                    <strong>Declared State Festival</strong>
+                    <p>Officially recognised by the Government of Andhra Pradesh in 1998; continued by Telangana after 2014.</p>
+                  </div>
+                </div>
+                <div className="about-info-card about-info-card--main">
+                  <div className="aic-stat">
+                    <span className="aic-big">100%</span>
+                    <span className="aic-label">Tribal Tradition</span>
+                  </div>
+                  <p className="aic-text">All rituals conducted exclusively by Koya tribal priests — no Vedic or Brahminic influence.</p>
+                </div>
+                <div className="about-info-card about-info-card--bottom">
+                  <span className="aic-icon">📍</span>
+                  <div>
+                    <strong>Medaram Village</strong>
+                    <p>Tadvai Mandal, Mulugu District, within the Eturnagaram Wildlife Sanctuary.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="intro-badge">
-              <span>Declared State Festival</span>
-              <strong>1998</strong>
+          </div>
+        </div>
+      </Fade>
+
+      {/* ── EXPLORE SECTIONS ─────────────────────────────── */}
+      <Fade>
+        <div className="home-explore">
+          <div className="container">
+            <div className="explore-header">
+              <span className="label">Explore This Site</span>
+              <h2 className="section-title">What You Will <span>Find Here</span></h2>
+              <div className="rule" />
+            </div>
+            <div className="explore-grid">
+              {SECTIONS.map(s => (
+                <Link key={s.to} to={s.to} className={`explore-card explore-card--${s.color}`}>
+                  <span className="explore-card__icon">{s.icon}</span>
+                  <h3 className="explore-card__title">{s.title}</h3>
+                  <p  className="explore-card__desc">{s.desc}</p>
+                  <span className="explore-card__cta">
+                    Read more <span>→</span>
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
-      </FadeSection>
+      </Fade>
 
-      {/* ── EXPLORE CARDS ─────────────────────────────────── */}
-      <FadeSection className="home-explore">
-        <div className="container">
-          <div className="explore-header">
-            <span className="section-label">Navigate</span>
-            <h2 className="section-title">Explore <span>Medaram</span></h2>
-            <div className="divider-gold center" />
+      {/* ── HERITAGE STATEMENT ───────────────────────────── */}
+      <Fade>
+        <div className="home-statement">
+          <div className="container">
+            <div className="statement-inner">
+              <div className="statement-icon">🏛️</div>
+              <div className="statement-text">
+                <span className="label label--white">Cultural Heritage</span>
+                <h2 className="section-title section-title--white">
+                  A Living Tradition That<br /><span>Belongs to Its People</span>
+                </h2>
+                <div className="rule rule--white" />
+                <p>
+                  This website is offered as a respectful documentation of the Sammakka 
+                  Saralamma Jathara. The stories, traditions, and beliefs presented here 
+                  belong to the Koya tribal community and the millions of devotees for whom 
+                  this festival is a deeply personal and sacred part of life.
+                </p>
+                <p>
+                  Visitors and readers are encouraged to approach this heritage with the 
+                  respect and care it deserves — recognising that behind every ritual and 
+                  every tradition stands a living community with centuries of history.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="explore-grid">
-            {EXPLORE.map(({ to, icon, title, desc }) => (
-              <Link to={to} key={to} className="explore-card">
-                <span className="explore-icon">{icon}</span>
-                <h3 className="explore-title">{title}</h3>
-                <p className="explore-desc">{desc}</p>
-                <span className="explore-arrow">→</span>
-              </Link>
+        </div>
+      </Fade>
+
+      {/* ── QUICK FACTS ──────────────────────────────────── */}
+      <Fade>
+        <div className="home-facts container">
+          <div className="facts-header">
+            <span className="label">At a Glance</span>
+            <h2 className="section-title">Key Facts About<br /><span>Medaram Jathara</span></h2>
+            <div className="rule" />
+          </div>
+          <div className="facts-grid">
+            {[
+              { icon:'📍', heading:'Location',     body:'Medaram Village, Tadvai Mandal, Mulugu District, Telangana — within the Eturnagaram Wildlife Sanctuary, part of the historic Dandakaranya Forest.' },
+              { icon:'🗓️', heading:'When',         body:'Once every two years during the full moon (Purnima) of Magha month (January–February). The 2026 Maha Jathara was held from 28–31 January.' },
+              { icon:'🌊', heading:'Jampanna Vagu',body:'A tributary of the River Godavari, named after the warrior son of Sammakka. Taking a sacred bath here is one of the most significant acts of the pilgrimage.' },
+              { icon:'🏛️', heading:'Governance',   body:'All rituals are led by Koya tribal priests. The Telangana government provides extensive infrastructure, medical services, transport and security.' },
+              { icon:'🌍', heading:'Reach',         body:'Devotees travel from Telangana, Andhra Pradesh, Chhattisgarh, Maharashtra, Odisha, Karnataka and Jharkhand — and from across India.' },
+              { icon:'🚌', heading:'Access',        body:'TGSRTC operates over 4,000 special buses from across Telangana during the Jathara. The nearest city is Warangal (~90 km) and Hyderabad (~240 km).' },
+            ].map(f => (
+              <div key={f.heading} className="fact-card">
+                <span className="fact-icon">{f.icon}</span>
+                <h4 className="fact-heading">{f.heading}</h4>
+                <p  className="fact-body">{f.body}</p>
+              </div>
             ))}
           </div>
-        </div>
-      </FadeSection>
-
-      {/* ── QUOTE ─────────────────────────────────────────── */}
-      <FadeSection className="home-quote">
-        <div className="quote-inner container">
-          <span className="quote-mark">"</span>
-          <blockquote>
-            The Medaram Jathara is not merely a religious event — it is a vibrant 
-            celebration of Telangana's tribal heritage, a living symbol of the 
-            indomitable spirit of India's indigenous communities.
-          </blockquote>
-          <cite>— Telangana Government, Official Declaration</cite>
-        </div>
-      </FadeSection>
-
-      {/* ── LOCATION HIGHLIGHT ────────────────────────────── */}
-      <FadeSection className="home-location container">
-        <div className="location-card">
-          <span className="section-label">Where to Find Us</span>
-          <h2 className="section-title">Nestled in the <span>Sacred Forests</span></h2>
-          <div className="divider-gold" />
-          <div className="location-details">
-            <div className="loc-item">
-              <span className="loc-icon">📍</span>
-              <div>
-                <strong>Location</strong>
-                <p>Medaram Village, Tadvai Mandal, Mulugu District, Telangana</p>
-              </div>
-            </div>
-            <div className="loc-item">
-              <span className="loc-icon">🌲</span>
-              <div>
-                <strong>Setting</strong>
-                <p>Inside the Eturnagaram Wildlife Sanctuary, part of Dandakaranya Forest</p>
-              </div>
-            </div>
-            <div className="loc-item">
-              <span className="loc-icon">🚌</span>
-              <div>
-                <strong>Distance</strong>
-                <p>~240 km from Hyderabad · ~90 km from Warangal</p>
-              </div>
-            </div>
-            <div className="loc-item">
-              <span className="loc-icon">📅</span>
-              <div>
-                <strong>Frequency</strong>
-                <p>Once every two years, during the full moon of Magha (February)</p>
-              </div>
-            </div>
+          <div className="facts-cta">
+            <Link to="/guide" className="btn-primary">Full Visitor's Guide</Link>
           </div>
-          <Link to="/guide" className="btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-            View Visitor's Guide
-          </Link>
         </div>
-      </FadeSection>
+      </Fade>
 
-      {/* ── FOOTER ────────────────────────────────────────── */}
+      {/* ── FOOTER ───────────────────────────────────────── */}
       <footer className="site-footer">
-        <div className="footer-logo">🪔 Medaram Jathara</div>
-        <p className="footer-sub">Asia's Largest Tribal Festival · Telangana, India</p>
-        <nav className="footer-links">
-          <Link to="/">Home</Link>
-          <Link to="/history">History</Link>
-          <Link to="/traditions">Traditions</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/guide">Visitor's Guide</Link>
+        <p className="footer-brand">Medaram Jathara</p>
+        <p className="footer-tagline">Cultural Heritage Documentation · Telangana, India</p>
+        <nav className="footer-nav">
+          {[['/', 'Home'], ['/history', 'History'], ['/traditions', 'Traditions'], ['/gallery', 'Gallery'], ['/guide', "Visitor's Guide"]].map(([to, label]) => (
+            <Link key={to} to={to}>{label}</Link>
+          ))}
         </nav>
         <p className="footer-copy">
-          A documentation project celebrating the cultural heritage of the Koya tribe · Telangana
+          A documentation project in respectful acknowledgement of the Koya tribal community and the devotees of Sammakka and Saralamma.
         </p>
       </footer>
     </div>

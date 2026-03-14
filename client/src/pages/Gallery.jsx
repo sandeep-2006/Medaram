@@ -4,246 +4,137 @@ import './Gallery.css';
 
 function useFadeIn(ref) {
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    if (!ref.current) return;
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add('visible'); obs.disconnect(); } },
+      ([e]) => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.disconnect(); } },
       { threshold: 0.1 }
     );
-    obs.observe(el);
+    obs.observe(ref.current);
     return () => obs.disconnect();
   }, [ref]);
 }
 
-function FadeSection({ children, className = '' }) {
+function Fade({ children, className = '' }) {
   const ref = useRef(null);
   useFadeIn(ref);
   return <div ref={ref} className={`fade-section ${className}`}>{children}</div>;
 }
 
-const CATEGORIES = ['All', 'Deities', 'Rituals', 'Pilgrims', 'Forest', 'Culture'];
+const CATS = ['All', 'Deities & Altars', 'Rituals', 'Pilgrims', 'Forest & Nature', 'Culture'];
 
-/* Gallery items — mix of Wikipedia public-domain images and descriptive placeholders */
 const ITEMS = [
-  {
-    cat:   'Deities',
-    title: 'Sammakka\'s Sacred Altar',
-    desc:  'The Gaddhe (altar) of Sammakka decorated with offerings of jaggery, vermillion and turmeric',
-    emoji: '🌿',
-    bg:    'linear-gradient(135deg, #1a2a0a 0%, #2a3a10 100%)',
-    accent:'#7ab040',
-    size:  'tall',
-    src:   'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Sammakka_shrine_Medaram.jpg/800px-Sammakka_shrine_Medaram.jpg',
-  },
-  {
-    cat:   'Pilgrims',
-    title: 'Sea of Devotees',
-    desc:  'Millions of pilgrims throng the festival grounds during the Maha Darshan on Day 3',
-    emoji: '👥',
-    bg:    'linear-gradient(135deg, #1a0808 0%, #2a1010 100%)',
-    accent:'#e07060',
-    size:  'normal',
-    src:   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Medaram_jatara_2018.jpg/800px-Medaram_jatara_2018.jpg',
-  },
-  {
-    cat:   'Rituals',
-    title: 'Jaggery Offerings',
-    desc:  'Devotees offer jaggery equal to their body weight — a tradition called Bangaram',
-    emoji: '⚖️',
-    bg:    'linear-gradient(135deg, #1a1408 0%, #2a2010 100%)',
-    accent:'#e8a030',
-    size:  'normal',
-    src:   '',
-  },
-  {
-    cat:   'Forest',
-    title: 'Jampanna Vagu',
-    desc:  'The sacred red-tinted stream where millions take a holy dip during the Jathara',
-    emoji: '🌊',
-    bg:    'linear-gradient(135deg, #080a1a 0%, #101520 100%)',
-    accent:'#6080e0',
-    size:  'wide',
-    src:   '',
-  },
-  {
-    cat:   'Culture',
-    title: 'Tribal Drumming',
-    desc:  'Koya tribal musicians playing dappu and tudumu drums that resound through the forest',
-    emoji: '🥁',
-    bg:    'linear-gradient(135deg, #1a0a14 0%, #2a1020 100%)',
-    accent:'#c06090',
-    size:  'normal',
-    src:   '',
-  },
-  {
-    cat:   'Deities',
-    title: 'The Procession',
-    desc:  'The sacred caskets of the goddesses are carried in a grand procession through Jampanna Vagu',
-    emoji: '🪔',
-    bg:    'linear-gradient(135deg, #1a1000 0%, #2a1e00 100%)',
-    accent:'#e8a030',
-    size:  'tall',
-    src:   '',
-  },
-  {
-    cat:   'Forest',
-    title: 'Eturnagaram Sanctuary',
-    desc:  'The remote forest setting of Medaram within the Eturnagaram Wildlife Sanctuary',
-    emoji: '🌲',
-    bg:    'linear-gradient(135deg, #061806 0%, #0c2810 100%)',
-    accent:'#50a060',
-    size:  'normal',
-    src:   '',
-  },
-  {
-    cat:   'Rituals',
-    title: 'Sacred Bath',
-    desc:  'Devotees taking the auspicious dip in the Jampanna Vagu, believed to cleanse all sins',
-    emoji: '🛁',
-    bg:    'linear-gradient(135deg, #060c1a 0%, #0c1525 100%)',
-    accent:'#4070c0',
-    size:  'normal',
-    src:   '',
-  },
-  {
-    cat:   'Culture',
-    title: 'Folk Dance',
-    desc:  'Traditional Koya tribal dances performed during the four days of the Jathara',
-    emoji: '💃',
-    bg:    'linear-gradient(135deg, #1a0818 0%, #280a24 100%)',
-    accent:'#b050b0',
-    size:  'wide',
-    src:   '',
-  },
-  {
-    cat:   'Pilgrims',
-    title: 'The Night Journey',
-    desc:  'Devotees travel through the night from across five states to reach Medaram in time for the festival',
-    emoji: '🌙',
-    bg:    'linear-gradient(135deg, #06060a 0%, #0c0c18 100%)',
-    accent:'#8090e0',
-    size:  'normal',
-    src:   '',
-  },
-  {
-    cat:   'Deities',
-    title: 'Vermillion & Turmeric',
-    desc:  'The altars glow with offerings of kumkuma (vermillion) and pasupu (turmeric) — sacred to the goddesses',
-    emoji: '🔴',
-    bg:    'linear-gradient(135deg, #1a0600 0%, #2a0c00 100%)',
-    accent:'#e04010',
-    size:  'normal',
-    src:   '',
-  },
-  {
-    cat:   'Culture',
-    title: 'Tribal Handicrafts',
-    desc:  'Festival stalls display handcrafted Koya tribal artefacts, jewellery and traditional wares',
-    emoji: '🏺',
-    bg:    'linear-gradient(135deg, #140c00 0%, #201400 100%)',
-    accent:'#c07820',
-    size:  'normal',
-    src:   '',
-  },
+  { cat:'Deities & Altars', title:'The Sammakka Altar',     desc:'The principal Gaddhe of Sammakka, adorned with turmeric, vermillion, and offerings from devotees',         icon:'🌿', span:'tall',   bg:'#e8f0fd', tc:'#1e4db7' },
+  { cat:'Pilgrims',          title:'The Journey on Foot',    desc:'Many devotees walk long distances barefoot as an act of devotion, arriving at Medaram after days of travel', icon:'👣', span:'normal', bg:'#f0f5ff', tc:'#2e63d4' },
+  { cat:'Rituals',           title:'Jaggery Offerings',      desc:'Mountains of jaggery surround the altars — devotees offer their weight in bellam (jaggery) as Bangaram',    icon:'⚖️', span:'wide',   bg:'#eef2f8', tc:'#0f2d6b' },
+  { cat:'Forest & Nature',   title:'Jampanna Vagu',          desc:'The sacred stream where millions take a holy dip during the Jathara, named in memory of Jampanna',          icon:'🌊', span:'normal', bg:'#e8f0fd', tc:'#1e4db7' },
+  { cat:'Culture',           title:'Tribal Drumming',        desc:'The resonant rhythms of dappu and tudumu drums fill the festival grounds throughout all four days',          icon:'🥁', span:'normal', bg:'#f0f5ff', tc:'#2e63d4' },
+  { cat:'Deities & Altars',  title:'Sacred Procession',      desc:'The deity caskets are carried in procession from their forest abodes to the main altars at Medaram',        icon:'🪔', span:'wide',   bg:'#eef2f8', tc:'#0f2d6b' },
+  { cat:'Forest & Nature',   title:'Eturnagaram Forest',     desc:'The Jathara takes place within the Eturnagaram Wildlife Sanctuary — the dense forest setting adds to its sacred character', icon:'🌲', span:'normal', bg:'#e8f5ec', tc:'#145a32' },
+  { cat:'Rituals',           title:'Sacred Bath',            desc:'Pilgrims take the auspicious dip in the Jampanna Vagu in the early morning hours before the main darshan',  icon:'🛁', span:'normal', bg:'#e8f0fd', tc:'#1e4db7' },
+  { cat:'Culture',           title:'Tribal Folk Dance',      desc:'Traditional Koya tribal dances performed in ceremonial dress — a form of devotion preserved across generations', icon:'💃', span:'normal', bg:'#f5eef8', tc:'#6c2a8a' },
+  { cat:'Pilgrims',          title:'A Night of Arrival',     desc:'Devotees arrive through the night from across five states, transforming the forest into a vast gathering',   icon:'🌙', span:'wide',   bg:'#0c1a38', tc:'#ffffff' },
+  { cat:'Deities & Altars',  title:'Vermillion and Turmeric',desc:'The altars glow with the red of kumkuma and the yellow of pasupu — offerings of great significance to the goddesses', icon:'🔴', span:'normal', bg:'#fdf0e8', tc:'#8b2500' },
+  { cat:'Culture',           title:'Tribal Artisans',        desc:'Festival stalls display handcrafted items by Koya artisans — jewellery, artefacts, and traditional wares',  icon:'🏺', span:'normal', bg:'#eef2f8', tc:'#0f2d6b' },
 ];
 
 export default function Gallery() {
   const [active, setActive] = useState('All');
 
-  const filtered = active === 'All'
-    ? ITEMS
-    : ITEMS.filter(i => i.cat === active);
+  const filtered = active === 'All' ? ITEMS : ITEMS.filter(i => i.cat === active);
 
   return (
     <div className="gallery-page page-wrapper">
 
-      {/* ── PAGE HEADER ────────────────────────────────────── */}
-      <section className="page-hero page-hero--gallery">
-        <div className="page-hero-overlay" />
-        <div className="page-hero-content">
-          <span className="section-label">Visual Journey</span>
-          <h1 className="page-hero-title">Gallery of<br /><span>Medaram Jathara</span></h1>
+      <section className="page-hero">
+        <div className="page-hero-accent" />
+        <div className="page-hero-content container">
+          <span className="label label--white">Visual Documentation</span>
+          <h1 className="page-hero-title">
+            Gallery of<br /><span>Medaram Jathara</span>
+          </h1>
           <p className="page-hero-desc">
-            A window into the world's largest tribal congregation — its sacred rituals, 
-            vibrant culture and the extraordinary devotion of millions.
+            A visual record of the world's largest tribal congregation — the sacred 
+            altars, the forest processions, the river bathing, and the extraordinary 
+            gathering of millions who come to honour Sammakka and Saralamma.
           </p>
         </div>
       </section>
 
-      {/* ── FILTERS ────────────────────────────────────────── */}
-      <FadeSection className="gallery-filters container">
-        <div className="filter-bar">
-          {CATEGORIES.map(cat => (
-            <button
-              key={cat}
-              className={`filter-btn${active === cat ? ' filter-btn--active' : ''}`}
-              onClick={() => setActive(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-        <p className="gallery-count">
-          Showing <strong>{filtered.length}</strong> {active === 'All' ? 'items' : `${active} items`}
-        </p>
-      </FadeSection>
-
-      {/* ── GRID ───────────────────────────────────────────── */}
-      <FadeSection className="gallery-grid container">
-        <div className="masonry">
-          {filtered.map((item, i) => (
-            <div key={`${item.title}-${i}`} className={`gallery-item gallery-item--${item.size}`}>
-              <div
-                className="gallery-img"
-                style={{
-                  background: item.src
-                    ? `url(${item.src}) center/cover no-repeat, ${item.bg}`
-                    : item.bg,
-                }}
+      {/* ── FILTERS ──────────────────────────────────────── */}
+      <Fade>
+        <div className="gallery-filters container">
+          <div className="filter-row">
+            {CATS.map(c => (
+              <button
+                key={c}
+                onClick={() => setActive(c)}
+                className={`filter-btn${active === c ? ' filter-btn--active' : ''}`}
               >
-                {!item.src && (
-                  <div className="gallery-placeholder">
-                    <span className="gallery-emoji">{item.emoji}</span>
+                {c}
+              </button>
+            ))}
+          </div>
+          <p className="gallery-count">
+            <strong>{filtered.length}</strong> {active === 'All' ? 'items' : `items in "${active}"`}
+          </p>
+        </div>
+      </Fade>
+
+      {/* ── GRID ─────────────────────────────────────────── */}
+      <Fade>
+        <div className="gallery-grid-wrap container">
+          <div className="gallery-grid">
+            {filtered.map((item, i) => (
+              <div
+                key={`${item.title}-${i}`}
+                className={`gitem gitem--${item.span}`}
+                style={{ '--bg': item.bg, '--tc': item.tc }}
+              >
+                <div className="gitem__inner">
+                  <div className="gitem__placeholder">
+                    <span className="gitem__icon">{item.icon}</span>
                   </div>
-                )}
-                <div className="gallery-overlay">
-                  <span className="gallery-cat">{item.cat}</span>
-                  <h3 className="gallery-title">{item.title}</h3>
-                  <p className="gallery-desc">{item.desc}</p>
+                  <div className="gitem__caption">
+                    <span className="gitem__cat">{item.cat}</span>
+                    <h3  className="gitem__title">{item.title}</h3>
+                    <p   className="gitem__desc">{item.desc}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </FadeSection>
-
-      {/* ── NOTE ───────────────────────────────────────────── */}
-      <FadeSection className="gallery-note container">
-        <div className="note-card">
-          <span>📸</span>
-          <div>
-            <h4>Add Your Own Photos</h4>
-            <p>
-              Replace the placeholder images by adding photos to your <code>src/assets/gallery/</code> 
-              folder and updating the <code>src</code> field in each gallery item in <code>Gallery.jsx</code>. 
-              Use images with an aspect ratio of 3:2 for best results. Freely-licensed images of the 
-              festival are also available on Wikimedia Commons.
-            </p>
+            ))}
           </div>
         </div>
-      </FadeSection>
+      </Fade>
+
+      {/* ── ADD PHOTOS NOTE ──────────────────────────────── */}
+      <Fade>
+        <div className="gallery-note container">
+          <div className="note-box">
+            <span>📸</span>
+            <div>
+              <h4>Adding Your Own Photographs</h4>
+              <p>
+                To populate the gallery with real photographs: place your images in 
+                <code>src/assets/gallery/</code>, import them into <code>Gallery.jsx</code>, 
+                and set the <code>src</code> property on each item. For best results, 
+                use landscape images at a 3:2 ratio. Freely licensed photographs of the 
+                Jathara are available on Wikimedia Commons — search for 
+                "Sammakka Saralamma Jatara".
+              </p>
+            </div>
+          </div>
+        </div>
+      </Fade>
 
       <footer className="site-footer">
-        <div className="footer-logo">🪔 Medaram Jathara</div>
-        <p className="footer-sub">Asia's Largest Tribal Festival · Telangana, India</p>
-        <nav className="footer-links">
-          <Link to="/">Home</Link>
-          <Link to="/history">History</Link>
-          <Link to="/traditions">Traditions</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/guide">Visitor's Guide</Link>
+        <p className="footer-brand">Medaram Jathara</p>
+        <p className="footer-tagline">Cultural Heritage Documentation · Telangana, India</p>
+        <nav className="footer-nav">
+          {[['/', 'Home'], ['/history', 'History'], ['/traditions', 'Traditions'], ['/gallery', 'Gallery'], ['/guide', "Visitor's Guide"]].map(([to, label]) => (
+            <Link key={to} to={to}>{label}</Link>
+          ))}
         </nav>
-        <p className="footer-copy">A documentation project celebrating the cultural heritage of the Koya tribe · Telangana</p>
+        <p className="footer-copy">A documentation project in respectful acknowledgement of the Koya tribal community and the devotees of Sammakka and Saralamma.</p>
       </footer>
     </div>
   );

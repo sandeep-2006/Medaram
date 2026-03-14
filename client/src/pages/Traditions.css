@@ -1,257 +1,261 @@
-/* ─── Traditions Intro ───────────────────────────────────── */
-.traditions-intro { padding: 5rem 2rem; }
+/* ── Intro ──────────────────────────────────────────────── */
+.trad-intro        { padding: 5.5rem 2rem; }
+.trad-intro-inner  { max-width: 950px; }
 
-.trad-intro-inner { max-width: 900px; }
-
-.trad-intro-text {
+.trad-intro-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 1.5rem;
+  gap: 3rem;
 }
 
-.trad-intro-text p {
+.trad-intro-cols p {
   font-size: 1.05rem;
-  color: var(--cream-dim);
-  line-height: 1.8;
+  color: var(--text-secondary);
+  line-height: 1.85;
 }
 
-/* ─── Gaddelu ────────────────────────────────────────────── */
-.gaddelu-section { padding-bottom: 5rem; }
+/* ── Gaddelu (New Layout) ───────────────────────────────── */
+.gaddelu-section {
+  background: var(--bg-dark);
+  padding: 5.5rem 2rem;
+}
 
-.gaddelu-header {
-  text-align: center;
+.gaddelu-section .label    { color: var(--blue-light); }
+.gaddelu-section .section-title { color: var(--white); }
+.gaddelu-section .section-title span { color: var(--blue-light); }
+.gaddelu-section .rule     { background: var(--blue-light); }
+
+.gadde-explanation {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--blue-light);
+  padding: 2.5rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 3.5rem;
+  max-width: 900px;
+}
+
+.gadde-explanation h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--white);
   margin-bottom: 1rem;
 }
 
-.gaddelu-intro-text {
+.gadde-explanation p {
   font-size: 1.05rem;
-  color: var(--cream-dim);
-  font-style: italic;
-  max-width: 700px;
-  margin: 1.25rem auto 2.5rem;
-  text-align: center;
+  color: var(--text-white-dim);
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
-.gaddelu-grid {
+.gadde-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.gaddelu-clean-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-.gadde-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--accent);
-  border-radius: 4px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: transform 0.25s, box-shadow 0.25s;
+.gadde-clean-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
 }
-.gadde-card:hover {
+
+.gadde-clean-card:hover {
+  background: rgba(30, 77, 183, 0.2);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
-.gadde-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
-
-.gadde-name {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  color: var(--accent, var(--gold));
-  margin-bottom: 0.5rem;
+.gadde-clean-header h4 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.gadde-origin {
-  font-size: 0.88rem;
-  color: var(--cream-muted);
-  font-style: italic;
-  line-height: 1.5;
+.gadde-clean-card p {
+  font-size: 0.95rem;
+  color: var(--text-white-dim);
+  line-height: 1.6;
 }
 
-/* ─── Four Days ──────────────────────────────────────────── */
-.four-days-section {
-  background: var(--bg-card);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 5rem 0;
+/* ── Detailed Four Days (Horizontal Layout) ─────────────── */
+.detailed-days-section {
+  padding: 5.5rem 2rem;
+  background: var(--off-white);
 }
 
-.days-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.days-header-wrapper {
+  max-width: 800px;
+  margin-bottom: 4rem;
 }
 
-.days-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
+.days-intro {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-top: 1.5rem;
 }
 
-.day-card {
+.days-vertical-list {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--border);
-  transition: background 0.2s;
-}
-.day-card:last-child { border-right: none; }
-.day-card:hover { background: rgba(232,160,48,0.03); }
-
-.day-number {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--bg-deep);
-  background: var(--gold);
-  padding: 0.6rem 1.25rem;
-  font-weight: 700;
+  gap: 5rem;
 }
 
-.day-body { padding: 1.5rem; flex: 1; }
-
-.day-name {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  color: var(--cream);
-  margin-bottom: 0.75rem;
+.day-horizontal-block {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
 }
 
-.day-desc {
-  font-size: 0.9rem;
-  color: var(--cream-dim);
-  line-height: 1.7;
-}
-
-/* ─── Rituals Grid ───────────────────────────────────────── */
-.rituals-section { padding-bottom: 5rem; }
-
-.rituals-header {
-  text-align: center;
+.day-main-header {
   margin-bottom: 3rem;
+  text-align: center;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 2rem;
 }
 
-.rituals-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.ritual-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 1.75rem;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.ritual-card:hover {
-  border-color: var(--gold-dim);
-  transform: translateY(-3px);
-}
-
-.ritual-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.ritual-icon { font-size: 1.8rem; }
-
-.ritual-tag {
-  font-family: var(--font-heading);
-  font-size: 0.6rem;
+.day-badge {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(232,160,48,0.1);
-  padding: 0.25rem 0.6rem;
-  border-radius: 2px;
+  color: var(--white);
+  background: var(--blue-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
 }
 
-.ritual-title {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  color: var(--cream);
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
+.day-main-header h3 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--text-primary);
 }
 
-.ritual-desc {
-  font-size: 0.9rem;
-  color: var(--cream-dim);
-  line-height: 1.7;
-}
-
-/* ─── Fact Card ──────────────────────────────────────────── */
-.traditions-fact {
-  padding-bottom: 4rem;
-}
-
-.fact-card {
-  background: linear-gradient(135deg, rgba(232,160,48,0.06), rgba(192,57,43,0.04));
-  border: 1px solid var(--border-strong);
-  border-radius: 4px;
-  padding: 2.5rem;
+.day-subsections {
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.fact-icon { font-size: 2.5rem; flex-shrink: 0; }
-
-.fact-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--gold);
-  margin-bottom: 0.75rem;
+.subsection-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
-.fact-card p {
-  font-size: 1.02rem;
-  color: var(--cream-dim);
+.subsection-row:nth-child(even) .subsection-text {
+  order: 2;
+}
+
+.subsection-row:nth-child(even) .subsection-image-wrapper {
+  order: 1;
+}
+
+.subsection-text h4 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--blue-deep);
+  margin-bottom: 1rem;
+}
+
+.subsection-text p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
   line-height: 1.8;
 }
 
-/* ─── CTA ────────────────────────────────────────────────── */
-.trad-cta {
-  padding-bottom: 6rem;
-  text-align: center;
+.subsection-image-wrapper {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
-.trad-cta p {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--cream-muted);
-  margin-bottom: 1.5rem;
+.placeholder-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-/* ─── Responsive ─────────────────────────────────────────── */
-@media (max-width: 1024px) {
-  .gaddelu-grid  { grid-template-columns: repeat(2, 1fr); }
-  .rituals-grid  { grid-template-columns: repeat(2, 1fr); }
-  .days-grid     { grid-template-columns: repeat(2, 1fr); }
-  .day-card      { border-bottom: 1px solid var(--border); }
-  .day-card:nth-child(2) { border-right: none; }
-  .day-card:last-child   { border-bottom: none; }
-  .day-card:nth-child(3) { border-bottom: none; }
+.subsection-image-wrapper:hover .placeholder-img {
+  transform: scale(1.05);
+}
+
+/* ── Harmony ─────────────────────────────────────────────── */
+.harmony-section { 
+  padding: 4rem 2rem 5.5rem; 
+  background: var(--white); /* Ensure background transitions smoothly */
+}
+
+.harmony-card {
+  background: var(--blue-pale);
+  border: 1px solid var(--border-mid);
+  border-left: 5px solid var(--blue-primary);
+  border-radius: 8px;
+  padding: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto; /* Added to center the block perfectly */
+  margin-top: 3rem; /* Added spacing from the upper block */
+}
+
+.harmony-icon { font-size: 2.5rem; flex-shrink: 0; }
+
+.harmony-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--blue-deep);
+  margin-bottom: 0.9rem;
+}
+
+.harmony-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+.harmony-text p:last-child { margin-bottom: 0; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .gaddelu-clean-list { grid-template-columns: repeat(2, 1fr); }
+  .subsection-row { gap: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .trad-intro-text { grid-template-columns: 1fr; gap: 1.25rem; }
-  .gaddelu-grid    { grid-template-columns: repeat(2, 1fr); }
-  .rituals-grid    { grid-template-columns: 1fr; }
-  .fact-card       { flex-direction: column; }
-  .traditions-intro { padding: 4rem 1.5rem; }
-}
-
-@media (max-width: 480px) {
-  .gaddelu-grid { grid-template-columns: 1fr; }
-  .days-grid    { grid-template-columns: 1fr; }
-  .day-card     { border-right: none; border-bottom: 1px solid var(--border); }
+  .trad-intro-cols { grid-template-columns: 1fr; gap: 1.5rem; }
+  .gaddelu-clean-list { grid-template-columns: 1fr; }
+  
+  .day-horizontal-block { padding: 2rem 1.5rem; }
+  
+  .subsection-row { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+  
+  .subsection-row:nth-child(even) .subsection-text { order: 1; }
+  .subsection-row:nth-child(even) .subsection-image-wrapper { order: 2; }
+  
+  .harmony-card { flex-direction: column; gap: 1rem; }
+  .trad-intro, .detailed-days-section, .harmony-section { padding-left: 1.25rem; padding-right: 1.25rem; }
 }

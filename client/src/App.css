@@ -1,4 +1,4 @@
-/* App-level layout: Navbar + page stack */
+/* App root */
 #root {
   display: flex;
   flex-direction: column;
