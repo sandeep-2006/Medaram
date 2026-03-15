@@ -27,57 +27,57 @@ const DETAILED_DAYS = [
     subsections: [
       {
         subtitle: 'Sacred Purification at Kannepalli',
-        text: "At the village of Kannepalli, Kaka clan priests initiate Day 1 with Manda Melige. This preparatory ritual involves purifying the sanctum with sacred soil and installing a bamboo flagstaff. To ward off evil spirits, they hang a rooster at the village entrance, ensuring a sanctified space before Saralamma's grand departure.",
+        text: "At Kannepalli, Kaka clan priests initiate the Jatara with Manda Melige — a ritual purifying the sanctum with sacred soil and installing a bamboo flagstaff. A rooster is hung at the village entrance to ward off evil spirits, ensuring the entire space is sanctified before Saralamma's ceremonial departure begins.",
         img: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'Secret Rites and Divine Possession',
-        text: 'The Kannepalli temple then closes for "secret" prayers. Chief priest Kaka Saraiah and Koya Vaddes use sacred vermilion and turmeric pots to petition for community well-being. During these confidential rites, the priest enters a spiritual trance, becoming possessed by Goddess Saralamma while the public waits outside in high anticipation.',
+        text: 'The Kannepalli temple closes for secret prayers. Chief priest Kaka Saraiah and the Koya Vaddes use sacred vermilion and turmeric pots to petition for community wellbeing. During these confidential rites — performed away from the waiting public — the priest enters a deep trance, becoming possessed by Goddess Saralamma herself.',
         img: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The journey from Kannepalli',
-        text: "By evening, the priest emerges carrying the goddess's insignia under a ceremonial umbrella. Following a grand Aarti by Kannepalli villagers, the procession moves rapidly toward Medaram. Devotees, including yellow-clad Shivasatties, offer jaggery and prostrate themselves on the ground, seeking blessings as the goddess travels toward the Jampanna Vagu.",
+        text: "By evening, the possessed priest emerges carrying the goddess's insignia under a ceremonial umbrella. Following a grand Aarti, the procession moves rapidly toward Medaram. Devotees — including yellow-clad Shivasatties — offer jaggery and prostrate themselves on the ground, seeking blessings as the goddess travels toward the sacred Jampanna Vagu.",
         img: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Holy Dip of Purification',
-        text: 'Before reaching the sacred altars, millions of devotees gather at Jampanna Vagu to take a holy dip. This ritual bath is a mandatory act of purification, believed to wash away sins and cure physical ailments. The stream serves as the spiritual gateway, cleansing the pilgrims before they enter the presence of the goddesses.',
+        text: 'Before reaching the sacred altars, millions gather at Jampanna Vagu for a holy dip — a mandatory act of purification believed to wash away sins and cure physical ailments. The stream serves as the spiritual gateway, cleansing pilgrims before they enter the presence of the goddesses at Medaram.',
         img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Legend of Sacrifice',
-        text: 'The stream is named after Jampanna, the son of Sammakka, who died here fighting the Kakatiya army. Tribal lore says the water turned red with his blood, and today, devotees believe the stream carries his heroic spirit. Pilgrims offer prayers to honor his sacrifice, acknowledging the deep ancestral roots of the tribal resistance',
+        text: 'The stream is named after Jampanna — the son of Sammakka — who died fighting the Kakatiya army at this very spot. Tribal lore says the water turned red with his blood. Pilgrims offer prayers honoring his sacrifice, acknowledging the deep ancestral roots of the tribal resistance that gave rise to the Jatara.',
         img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'Crossing the Jampanna Vagu',
-        text: 'As the procession arrives from Kannepalli, the possessed priest carries the goddess\'s insignia through the water. This crossing is a moment of intense fervor; women specifically devoted to this practice for children often sprinkle the "sacred" water on themselves, seeking a final blessing before the goddess is seated at the Medaram altars.',
+        text: "As the Kannepalli procession arrives, the possessed priest carries the goddess's insignia through the water. Women devoted to this practice — particularly those seeking blessings for children — sprinkle the sacred water on themselves. This crossing is a moment of intense fervor before the goddess is seated at the Medaram altars.",
         img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Groom\'s Departure from Punugondla',
-        text: 'From Punugondla village in Mahabubabad, Pagididda Raju begins his journey as a symbolic bridegroom. Dressed in festive attire, the deity is escorted by the Penaka clan priests. This "Shobha Yatra" marks the start of his 80-kilometer trek to Medaram to reunite with his consort, the Goddess Sammakka.',
+        text: "From Punugondla village, Pagididda Raju begins his journey as a symbolic bridegroom. Dressed in festive attire, the deity is escorted by Penaka clan priests in a Shobha Yatra — a ceremonial procession marking the start of his 80-kilometre trek to Medaram to reunite with the Goddess Sammakka.",
         img: 'https://images.unsplash.com/photo-1604028383870-1376e1a062cf?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Sacred Trek and Insignia',
-        text: 'The Penaka Vaddes carry the sacred insignia, including the ceremonial flag and Aderalu pots, entirely on foot. Amidst rhythmic tribal drumbeats and traditional dances, the procession travels through dense forests. This arduous walk reflects the deep ancestral devotion of the Koya people, honoring the historical journey of their warrior chieftain.',
+        text: 'Penaka Vaddes carry the sacred insignia — the ceremonial flag and Aderalu pots — entirely on foot through dense forests. Amidst rhythmic tribal drumbeats and traditional dances, the procession travels through the wilderness, reflecting the deep ancestral devotion of the Koya people honoring their warrior chieftain\'s historical journey.',
         img: 'https://images.unsplash.com/photo-1604028383870-1376e1a062cf?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'Arrival and Vagu Crossing',
-        text: "On the evening of Day 1, the procession reaches Medaram. Before being installed on the Gaddelu, the deity's symbols are carried across the Jampanna Vagu stream. This arrival signals the official start of the divine family reunion, where thousands of devotees celebrate the groom's return before the grand festival begins.",
+        text: "By evening of Day One, the procession reaches Medaram. Before being installed on the Gaddelu, the deity's symbols are carried across the Jampanna Vagu — a crossing that signals the official start of the divine family reunion. Thousands of devotees celebrate the groom's arrival as the grand festival begins.",
         img: 'https://images.unsplash.com/photo-1604028383870-1376e1a062cf?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Journey of Govindaraju',
-        text: 'Govindarraju, the husband of Saralamma, begins his sacred journey from the village of Kondai. Koya priests carry his traditional insignia through the forest, accompanied by the rhythmic beating of Dolu drums and tribal dances. This trek signifies his loyal journey to reunite with the divine family at Medaram.',
+        text: 'Govindaraju — the husband of Saralamma — begins his sacred journey from Kondai village. Koya priests carry his traditional insignia through the forest, accompanied by rhythmic Dolu drumbeats and tribal dances. This trek signifies his loyal journey to reunite with the divine family gathering at Medaram.',
         img: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'Arrival and Divine Reunion',
-        text: 'Upon reaching Medaram, Govindarraju\'s symbols are carried across the Jampanna Vagu for purification. He is then installed on his designated Gaddelu (altar) alongside the other deities. His arrival is a vital part of the divine reunion, representing the bravery of the warriors who fought alongside Sammakka and Saralamma.',
+        text: "Upon reaching Medaram, Govindaraju's symbols are carried across the Jampanna Vagu for purification. He is installed on his designated Gaddelu alongside the other deities — representing the bravery of warriors who fought alongside Sammakka and Saralamma. His arrival completes the first phase of the sacred family's reunion.",
         img: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80'
       }
     ]
@@ -88,27 +88,27 @@ const DETAILED_DAYS = [
     subsections: [
       {
         subtitle: 'The Divine Manifestation of Sammakka',
-        text: 'Before anything else, it must be understood what exactly rests on that hill. The tribe went into the forest to search for Sammakka after the battle and found a box with kumkum, a few bangles, and tiger footprints at the very spot where she had last been seen.  This sacred vermillion casket known as the Kumkuma Bharina is recognized as the goddess herself. Unlike mainstream traditions, there is no sculpted idol because Sammakka exists as a bamboo stick smeared with vermillion. She remains in a raw and formless state within a cave on the Chilakalagutta hillock where she stays untouched for two full years between festivals.',
+        text: 'Unlike mainstream traditions, Sammakka has no sculpted idol. The tribe, searching for her after battle, found a box of kumkum, bangles, and tiger footprints — recognized immediately as the goddess herself. This sacred vermillion casket, the Kumkuma Bharina, rests as a bamboo stick smeared with vermillion inside a cave at Chilakalagutta hillock.',
         img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Secret Sanctuary of the Sorangam',
-        text: 'The goddess does not reside on the mountain peak or in an open area but instead rests deep within the belly of the hill. A specific underground passage known as the Sorangam extends two hundred metres into the earth to house the sacred vermillion casket. This tunnel serves as the precise location for Sammakka to dwell in her forest state until the next Jathara begins. This hidden sanctuary protects the divine presence from the outside world and maintains the spiritual purity of the site.',
+        text: 'Sammakka does not reside on the mountain peak but deep within the hill. A two-hundred-metre underground passage — the Sorangam — houses her sacred casket between festivals. This hidden sanctuary protects the divine presence and maintains the spiritual purity of the site during the two years between each Jatara.',
         img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Sacred Awakening of Mande Melige',
-        text: 'Mande Melige serves as a crucial precursor to the Jatara and is observed exactly a week before the presiding deities are ceremonially brought from the forest. The most distinctive element of this ritual involves three women and two men from the Siddaboina clan who clean the Sammakka temple at Medaram using water from Jampanna Vagu. They apply sacred anthill soil to the walls and decorate the premises with traditional muggulu. Within Koya animism, this anthill soil represents a living earth spirit where the underworld meets the surface. Smearing the temple walls with this soil is a significant act of invoking deep and primal earth energy into the sacred space.',
+        text: 'Observed a week before the Jatara, Mande Melige involves three women and two men from the Siddaboina clan cleaning the Sammakka temple with Jampanna Vagu water. They apply sacred anthill soil to the walls — revered in Koya animism as a living earth spirit — and decorate with traditional muggulu patterns.',
         img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'Ritual Commencement and Spiritual Transition',
-        text: 'Prayers begin amidst rhythmic drum beats as festivities continue throughout the entire night to set the main Jatara in motion. Following the conclusion of Mande Melige, the goddess is considered awoken and a week of intense spiritual buildup begins. This ceremony ensures that the sacred corridor between the forest hillock and Medaram is spiritually open for the upcoming divine transition.',
+        text: 'Prayers begin amidst rhythmic drumbeats, continuing through the night to set the Jatara in motion. Following Mande Melige, the goddess is considered awoken and a week of spiritual buildup begins. This ceremony ensures the sacred corridor between the forest hillock and Medaram — the path the deity must travel — is spiritually open.',
         img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
       },
       {
         subtitle: 'The Hereditary Duty of the Vadde',
-        text: 'The eldest male member of the family, recognized as the Vadde, carries the sacred kumkum bharine representing Sammakka while adorned in traditional bells and belts. This spiritual responsibility is a hereditary honor because the Vadde is born into the role instead of being elected or trained by an institution. The bells and belts he wears during the procession act as sacred physical marks of his duty and are never worn as mere ornaments outside of this specific ritual timeframe.',
+        text: 'The eldest male of the Siddaboina family — recognized as the Vadde — carries the sacred kumkum bharine adorned in traditional bells and belts. This spiritual responsibility is hereditary, born into rather than trained for. The bells and belts worn during the procession are sacred marks of duty, never worn as ornaments outside this ritual.',
         img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
       },
 
@@ -153,39 +153,104 @@ const DETAILED_DAYS = [
     title: 'Maha Darshan',
     subsections: [
       {
-        subtitle: 'The Convergence of Millions',
-        text: 'With all four presences together on the Gaddelu, the third day marks the peak of the festival. Millions of devotees from across India gather in a massive display of shared faith, creating a temporary city deeply rooted in spiritual harmony.',
-        img: 'https://images.unsplash.com/photo-1615485981504-2081f2b6e511?auto=format&fit=crop&w=600&q=80'
+        subtitle: 'The Sacred Power of Magha Suddha Pournami',
+        text: 'Day Three falls on Magha Suddha Pournami — the full moon of the Magha month — considered the single most auspicious day of the Jatara. All four presences are now seated together on their Gaddelu, the sacred family is complete, and the spiritual current building since Day One reaches its absolute peak.',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80'
       },
       {
-        subtitle: 'The Bangaram Offering',
-        text: 'Devotees present jaggery, known locally as Bangaram, often equal to their own body weight. Women also offer Odi Biyyam and other necessary daily items. This sustainable and nature based offering reflects deep traditional wisdom, prioritizing natural forest resources over material wealth.',
+        subtitle: 'Punya Snanam — The Mandatory Purification',
+        text: 'Before approaching the Gaddelu, every devotee must first take a Punya Snanam — a sacred bath in the Jampanna Vagu. The belief is absolute: no one stands before the Goddess without first purifying at the stream named after her martyred son. Millions fill the banks from the earliest hours of morning.',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Varalau Pattatam — Prostrating the Entire Route',
+        text: 'Devotees fulfilling a vow — particularly for a child, recovery from illness, or relief from hardship — prostrate flat on the ground across the entire route from Jampanna Vagu to the Gadde. They stretch out fully, mark their fingertip position, stand, step forward, and prostrate again — all the way to the altar.',
+        img: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Bangaram — Offering Jaggery as Gold',
+        text: 'Bangaram means both gold and jaggery in the local tongue. Devotees offer jaggery equal to their own body weight — a substitute for actual gold rooted in forest community values. Weighing scales are kept beside the altars; the jaggery heaps at the feet of the Gaddelu by afternoon, vow after fulfilled vow.',
         img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80'
       },
       {
-        subtitle: 'Taking the Holy Dip',
-        text: 'Millions take a purifying bath in the Jampanna Vagu. Scientifically the red color of the water is attributed to the soil composition, but devotees believe the water reminds them of the sacrifice of their warrior ancestors and induces courage into their souls.',
+        subtitle: 'Odi Biyyam — The Women\'s Sacred Rice Offering',
+        text: 'Odi Biyyam is made exclusively by women. Raw rice mixed with turmeric is tied into the fold of a new cloth at the waist — carried against the body from home to the Gadde. Carrying it close throughout the journey is itself part of the offering. At the altar, the cloth is opened and the rice scattered before the deity.',
+        img: 'https://images.unsplash.com/photo-1590417174435-4ef18eddbf4b?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Saare — Offering the Household to the Goddess',
+        text: 'Alongside Odi Biyyam, women present a Saare — turmeric, kumkum, a mirror, a comb, bangles, betel leaves, and sacred rice. It is a literal placing of a woman\'s entire daily world before the Goddess, a statement that everything used to sustain the family is offered back to the one who protects it.',
+        img: 'https://images.unsplash.com/photo-1590417174435-4ef18eddbf4b?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'The Goat Sacrifice — Asking Permission',
+        text: 'Only those who specifically vowed a goat as their Mokku perform the sacrifice. The goat is adorned with turmeric and flowers, led around the Gadde, and offered alcohol. Then — in a gesture rooted in tribal ethics — the devotee formally asks the animal\'s permission. Only after a nod of acceptance is observed does the ritual proceed.',
+        img: 'https://images.unsplash.com/photo-1615485981504-2081f2b6e511?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Shivasattulu and Pabba — Blessings for the Childless',
+        text: 'Shivasattulu — women in yellow who enter deep spiritual trance — move through the festival grounds as living channels of the Goddess. Couples unable to conceive seek their blessing, called Pabba. The Shivasattu in trance places hands on the woman and speaks words of divine intervention, believed to carry Sammakka\'s direct response.',
+        img: 'https://images.unsplash.com/photo-1615485981504-2081f2b6e511?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Head Tonsuring — A Vow Fulfilled',
+        text: 'Parents who prayed for a child bring that child — sometimes still an infant — to have their first hair shaved at the Gadde. The hair offered is a declaration that this life belongs to the Goddess. Adults also tonsure as a public act of ego-surrender and gratitude for vows the Goddess honored.',
         img: 'https://images.unsplash.com/photo-1444044205806-38f3ed106c10?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'The Peak of the Human Congregation',
+        text: 'By mid-afternoon, Medaram holds over one crore devotees — the second-largest religious congregation in India and the largest tribal festival in Asia. As the full moon rises over the forest, tribal drums and Akkum horns fill the air. The Gaddelu glow with lamps and offerings, and the four-day circle of devotion reaches completion.',
+        img: 'https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=600&q=80'
       }
     ]
   },
   {
     dayLabel: 'Day Four',
-    title: 'The Sacred Return',
+    title: 'Tallula Vanapravesham',
     subsections: [
       {
-        subtitle: 'Vana Pravesham',
-        text: 'The final day is a solemn occasion known as Vana Pravesham. After being worshipped by millions, the deities return to the forest. The atmosphere transitions from celebratory to a quiet and reflective reverence.',
+        subtitle: 'The Shift in Atmosphere',
+        text: 'The fourth day carries a fundamentally different emotional quality. The drumbeats of arrival are replaced by a quiet, bittersweet reverence. Priests begin the morning with private prayers at the Gaddelu — the final hours are hours of last offerings, last glances, and last prayers before the Goddesses return to the forest for two more years.',
         img: 'https://images.unsplash.com/photo-1418065460487-3e41a6c8e15f?auto=format&fit=crop&w=600&q=80'
       },
       {
-        subtitle: 'The Farewell Rituals',
-        text: 'The Koya priests carefully carry the deity caskets back into the forest. The exact same security and official homage they received upon arriving at the platform are respectfully paid to the Goddesses as they return to their sanctuaries.',
+        subtitle: 'Final Darshan and Last Offerings at the Gaddelu',
+        text: 'Through the morning of Day Four, devotees who could not complete offerings the previous day take their final turn. Turmeric, sarees, coconuts, and Bangaram continue to accumulate at the bamboo altars. Children are lifted to touch the Vanam poles. Old women sit in silence at the edge of the Gadde — unwilling to leave.',
+        img: 'https://images.unsplash.com/photo-1418065460487-3e41a6c8e15f?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Tallula Vanapravesham — The Forest Calls Her Back',
+        text: 'In the early afternoon, priests begin Tallula Vanapravesham — the entry of the mothers back into the forest. Tallula means mothers in the Koya tongue. Commencement is signaled the same way as arrival: tribal drumbeats, the Akkum horn, and ceremonial prayers at the Gadde. Each deity then departs in sequence — exactly as they arrived.',
         img: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80'
       },
       {
-        subtitle: 'A Legacy of Sustainability',
-        text: 'As the crowds disperse, the underlying principles of the Jathara remain clear. The use of bamboo, earthen altars, and natural offerings aligns perfectly with concepts of ecological balance, showcasing a lived example of sustainable development and indigenous knowledge.',
+        subtitle: 'Saralamma\'s Return to Kannepalli',
+        text: 'Saralamma departs first, carried by the Kaka clan priests who brought her on Day One. As they leave — devotees lie flat on the ground and the priests step over them — an ancient act considered the highest departure blessing. After crossing the Vagu, the procession returns to reinstall her at the Kannepalli temple.',
+        img: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Sammakka\'s Return to Chilakalagutta',
+        text: 'The Siddaboina Vadde — the same hereditary priest who carried her in — now lifts the Kumkuma Bharina from the Gadde. Police honors, official escorts, and the SP are present as on arrival. The procession moves to the forest path, the priest wades the Vagu with the casket raised, and climbs alone back into the Sorangam.',
+        img: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'The Symmetry of Honor — Departure Mirrors Arrival',
+        text: 'Every honor given to the Goddesses on arrival is repeated — without reduction — on departure. The same police guard, the same officials, the same drums, the same rhythms. The Goddesses are warrior queens whose dignity is unchanged whether entering a city of millions or returning to a dark cave deep in the forest.',
+        img: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'Thiruguvaram Panduga — The Closing Rites',
+        text: 'Days after the Jatara, Thiruguvaram Panduga — the festival of turning back — is observed at Medaram and Kannepalli. Priests purify both sanctums with Jampanna Vagu water, light incense in the Dhupa Deepa ritual, and offer a final Yaata sacrifice as Naivedyam. Late-arriving devotees continue taking the holy dip and fulfilling vows at the quieter altars.',
+        img: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'The Sacred Items Are Locked Away',
+        text: 'The Vadde\'s bells and belts, the Gadde pole cloth, all ritual vessels and ornaments — every sacred item from the four days is gathered and sealed inside the temple vaults. They will not be touched, displayed, or used for any other purpose until the preparations for the next Jatara begin two years later.',
+        img: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        subtitle: 'The Two-Year Silence Begins',
+        text: 'Within days, the roads emptied of millions return to forest tracks. Stalls are dismantled, the grounds cleared. In the Sorangam beneath Chilakalagutta, Sammakka rests again in total darkness — as she has for centuries. Medaram, a village of hundreds in ordinary times, returns to silence. The forest takes everything back until the world is called again.',
         img: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&w=600&q=80'
       }
     ]
