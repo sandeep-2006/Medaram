@@ -104,6 +104,174 @@
   margin-top: 1.5rem;
 }
 
+/* ── Day Selector Dropdown ──────────────────────────────── */
+.day-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.day-dropdown {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+  max-width: 520px;
+}
+
+.day-dropdown-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--white);
+  border: 2px solid var(--border-light);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-align: left;
+  font-family: inherit;
+  box-shadow: var(--shadow-sm);
+}
+
+.day-dropdown-trigger:hover,
+.day-dropdown-trigger.open {
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px rgba(30, 77, 183, 0.1);
+}
+
+.day-dropdown-badge {
+  flex-shrink: 0;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--blue-primary);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.day-dropdown-title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.day-dropdown-chevron {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.day-dropdown-trigger.open .day-dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.day-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 2px solid var(--blue-primary);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  padding: 0.4rem;
+  margin: 0;
+  z-index: 100;
+  animation: dropdownFadeIn 0.15s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.day-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.day-dropdown-item:hover {
+  background: var(--blue-pale, #eef2ff);
+}
+
+.day-dropdown-item.active {
+  background: rgba(30, 77, 183, 0.08);
+}
+
+.day-dropdown-item-badge {
+  flex-shrink: 0;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  background: rgba(30, 77, 183, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.day-dropdown-item.active .day-dropdown-item-badge {
+  color: var(--white);
+  background: var(--blue-primary);
+}
+
+.day-dropdown-item-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+/* Step Dots */
+.day-step-dots {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.day-step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-primary);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.day-step-dot.active {
+  background: var(--blue-primary);
+  transform: scale(1.25);
+}
+
+.day-step-dot:hover:not(.active) {
+  background: rgba(30, 77, 183, 0.2);
+}
+
+/* ── Day Content Block ──────────────────────────────────── */
 .days-vertical-list {
   display: flex;
   flex-direction: column;
@@ -198,10 +366,45 @@
   transform: scale(1.05);
 }
 
+/* ── Prev / Next Navigation ─────────────────────────────── */
+.day-nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.day-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+  background: var(--white);
+  border: 2px solid var(--blue-primary);
+  border-radius: 8px;
+  padding: 0.65rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.day-nav-btn:hover:not(:disabled) {
+  background: var(--blue-primary);
+  color: var(--white);
+}
+
+.day-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 /* ── Harmony ─────────────────────────────────────────────── */
 .harmony-section { 
   padding: 4rem 2rem 5.5rem; 
-  background: var(--white); /* Ensure background transitions smoothly */
+  background: var(--white);
 }
 
 .harmony-card {
@@ -214,8 +417,8 @@
   gap: 2rem;
   align-items: flex-start;
   max-width: 900px;
-  margin: 0 auto; /* Added to center the block perfectly */
-  margin-top: 3rem; /* Added spacing from the upper block */
+  margin: 0 auto;
+  margin-top: 3rem;
 }
 
 .harmony-icon { font-size: 2.5rem; flex-shrink: 0; }
@@ -245,17 +448,23 @@
 @media (max-width: 768px) {
   .trad-intro-cols { grid-template-columns: 1fr; gap: 1.5rem; }
   .gaddelu-clean-list { grid-template-columns: 1fr; }
-  
+
+  .day-selector-wrapper { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .day-dropdown { max-width: 100%; }
+
   .day-horizontal-block { padding: 2rem 1.5rem; }
-  
+
   .subsection-row { 
     grid-template-columns: 1fr; 
     gap: 1.5rem;
   }
-  
+
   .subsection-row:nth-child(even) .subsection-text { order: 1; }
   .subsection-row:nth-child(even) .subsection-image-wrapper { order: 2; }
-  
+
+  .day-nav-arrows { flex-direction: column; }
+  .day-nav-btn { width: 100%; justify-content: center; }
+
   .harmony-card { flex-direction: column; gap: 1rem; }
   .trad-intro, .detailed-days-section, .harmony-section { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
