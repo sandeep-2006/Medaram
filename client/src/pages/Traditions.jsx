@@ -146,11 +146,6 @@ const DETAILED_DAYS = [
         text: 'One of the most extraordinary moments of the night. For security reasons, the power supply to the immediate altar area was briefly cut during the final installation of the deity. The supply was restored only after Sammakka was securely placed. In absolute darkness, surrounded by millions of waiting devotees, the Siddaboina Vadde approaches the Gadde and plants the Vanam(the sacred bamboo) and places the Kumkuma Bharina at the altar. Sammakka arrives in darkness, just as she once vanished into the forest in darkness. The moment the installation is complete, power is restored, and the entire sacred space floods with light and sound.',
         img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
       },
-      {
-      subtitle: 'The Divine Reunion at the Gadde',
-        text: 'The moment Sammakka is installed, something profound is complete. With her arrival, all four major tribal deities — Sammakka, her daughter Saralamma, husband Pagididda Raju, and son-in-law Govinda Raju  were seen seated on their respective Gaddelu. The entire family that died together in battle against the Kakatiyas is now reunited on the Gadde. This is the spiritual heart of the Jatara — not a temple ceremony, but a family coming home.',
-        img: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=600&q=80'
-      }
     ]
   },
   {
@@ -201,6 +196,15 @@ export default function Traditions() {
   const [activeDayIndex, setActiveDayIndex] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  function scrollToSection() {
+    if (sectionRef.current) {
+      const navHeight = 70;
+      const top = sectionRef.current.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
 
   const activeDay = DETAILED_DAYS[activeDayIndex];
 
@@ -218,6 +222,7 @@ export default function Traditions() {
   function handleDaySelect(index) {
     setActiveDayIndex(index);
     setDropdownOpen(false);
+    scrollToSection();
   }
 
   return (
@@ -319,7 +324,7 @@ export default function Traditions() {
       </Fade>
 
       {/* ── DETAILED FOUR DAYS (DROPDOWN) ──────────────── */}
-      <div className="detailed-days-section container">
+      <div className="detailed-days-section container" ref={sectionRef}>
         <Fade>
           <div className="days-header-wrapper">
             <span className="label">Festival Programme</span>
@@ -411,7 +416,7 @@ export default function Traditions() {
         <div className="day-nav-arrows">
           <button
             className="day-nav-btn"
-            onClick={() => setActiveDayIndex(i => Math.max(0, i - 1))}
+            onClick={() => { setActiveDayIndex(i => Math.max(0, i - 1)); scrollToSection(); }}
             disabled={activeDayIndex === 0}
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -421,7 +426,7 @@ export default function Traditions() {
           </button>
           <button
             className="day-nav-btn"
-            onClick={() => setActiveDayIndex(i => Math.min(DETAILED_DAYS.length - 1, i + 1))}
+            onClick={() => { setActiveDayIndex(i => Math.min(DETAILED_DAYS.length - 1, i + 1)); scrollToSection(); }}
             disabled={activeDayIndex === DETAILED_DAYS.length - 1}
           >
             Next Day
