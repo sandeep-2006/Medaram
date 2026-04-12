@@ -1,17 +1,18 @@
 /* ── History Intro ──────────────────────────────────────── */
-.hist-intro        { padding: 5.5rem 2rem; }
-.hist-intro-inner  { max-width: 950px; }
+.hist-intro        { padding: 7rem 2rem; }
+.hist-intro-inner  { max-width: 980px; }
 
 .hist-intro-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .hist-intro-cols p {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--text-secondary);
-  line-height: 1.85;
+  line-height: 2;
+  margin-bottom: 0;
 }
 
 /* ── Deity Section ──────────────────────────────────────── */
@@ -19,22 +20,22 @@
   background: var(--off-white);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
-  padding: 5.5rem 2rem;
+  padding: 7rem 2rem;
 }
 
 .deity-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .deity-card {
   background: var(--white);
   border: 1px solid var(--border-light);
   border-top: 4px solid var(--col, var(--blue-primary));
-  border-radius: 8px;
-  padding: 1.75rem;
+  border-radius: 10px;
+  padding: 2.25rem 2rem;
   box-shadow: var(--shadow-sm);
   transition: box-shadow .25s, transform .25s;
 }
@@ -43,23 +44,23 @@
 .deity-card__top {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-.deity-card__icon { font-size: 1.75rem; flex-shrink: 0; }
+.deity-card__icon { font-size: 2rem; flex-shrink: 0; }
 
 .deity-card__name {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .deity-card__role {
   font-family: var(--font-ui);
-  font-size: 0.68rem;
+  font-size: 0.69rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -67,37 +68,37 @@
 }
 
 .deity-card__desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.9;
 }
 
 /* ── Timeline ───────────────────────────────────────────── */
 .timeline-section {
-  padding: 6rem 2rem;
+  padding: 7.5rem 2rem;
   background: var(--white);
 }
 
-.timeline-header { margin-bottom: 3.5rem; max-width: 680px; }
+.timeline-header { margin-bottom: 4rem; max-width: 720px; }
 
 .timeline-intro {
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--text-muted);
   font-style: italic;
-  line-height: 1.75;
-  margin-top: -0.5rem;
+  line-height: 1.9;
+  margin-top: 0.25rem;
 }
 
 .timeline {
   position: relative;
-  max-width: 900px;
+  max-width: 950px;
 }
 
 .tl-item {
   display: grid;
-  grid-template-columns: 130px 52px 1fr;
+  grid-template-columns: 150px 60px 1fr;
   gap: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2.75rem;
   align-items: start;
 }
 
@@ -155,49 +156,49 @@
 .tl-card {
   background: var(--off-white);
   border: 1px solid var(--border-light);
-  border-radius: 8px;
-  padding: 1.5rem 1.75rem;
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  padding: 2rem 2.25rem;
+  margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
   transition: border-color .2s, box-shadow .2s;
 }
 .tl-card:hover { border-color: var(--border-mid); box-shadow: var(--shadow-sm); }
 
 .tl-event {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 .tl-body {
-  font-size: 0.95rem;
+  font-size: 0.97rem;
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.95;
 }
 
 /* ── Jampanna Section ───────────────────────────────────── */
-.jampanna-section { padding: 5.5rem 2rem; }
+.jampanna-section { padding: 7rem 2rem; }
 
 .jampanna-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
 }
 
 .jampanna-text p {
-  font-size: 1.05rem;
+  font-size: 1.07rem;
   color: var(--text-secondary);
-  line-height: 1.85;
-  margin-bottom: 1.2rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
 }
 
 .jampanna-card {
   background: var(--bg-dark);
-  border-radius: 10px;
-  padding: 2.5rem;
+  border-radius: 12px;
+  padding: 3rem;
   border: 1px solid rgba(255,255,255,.06);
 }
 
@@ -258,20 +259,20 @@
 }
 
 /* ── Recognition ────────────────────────────────────────── */
-.recognition-section { padding: 5.5rem 2rem; background: var(--off-white); border-top: 1px solid var(--border-light); }
+.recognition-section { padding: 7rem 2rem; background: var(--off-white); border-top: 1px solid var(--border-light); }
 
 .rec-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .rec-card {
   background: var(--white);
   border: 1px solid var(--border-light);
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: box-shadow .2s, transform .2s;
@@ -280,11 +281,11 @@
 
 .rec-num {
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--blue-primary);
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .rec-title {
@@ -294,15 +295,15 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-primary);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
-.rec-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+.rec-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; }
 
 /* ── CTA ────────────────────────────────────────────────── */
 .hist-cta {
   background: var(--bg-dark);
-  padding: 4rem 2rem;
+  padding: 5.5rem 2rem;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,.05);
 }
@@ -320,24 +321,276 @@
 
 .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
+/* ── Koya Section ────────────────────────────────────────── */
+.koya-section {
+  padding: 7rem 2rem;
+  background: var(--off-white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.koya-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.koya-text p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.koya-facts-card {
+  background: var(--bg-dark);
+  border-radius: 12px;
+  padding: 3rem;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.kf-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.kf-header > span { font-size: 2.5rem; }
+
+.kf-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+
+.kf-header p {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-white-dim);
+  opacity: .7;
+}
+
+.kf-items { display: flex; flex-direction: column; gap: 1rem; }
+
+.kf-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.kf-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.kf-item > span {
+  font-family: var(--font-ui);
+  font-size: 0.73rem;
+  font-weight: 500;
+  color: var(--text-white-dim);
+  opacity: .6;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.kf-item > strong {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: right;
+}
+
+/* ── Deity Intro ─────────────────────────────────────────── */
+.deity-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  margin-top: 0.75rem;
+}
+
+/* ── Sacred Sites ────────────────────────────────────────── */
+.sacred-sites-section { padding: 7rem 2rem; }
+
+.sacred-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  margin-top: 0.75rem;
+}
+
+.sacred-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.jc-desc {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,.58);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+/* ── Ritual Days ─────────────────────────────────────────── */
+.rituals-section {
+  padding: 7rem 2rem;
+  background: var(--off-white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.rituals-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  margin-top: 0.75rem;
+}
+
+.ritual-days {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+.ritual-day-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s, transform .25s;
+}
+.ritual-day-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+.rd-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.rd-icon { font-size: 2.25rem; flex-shrink: 0; }
+
+.rd-day {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.rd-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rd-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.95;
+}
+
+/* ── Unique Section ──────────────────────────────────────── */
+.unique-section { padding: 7rem 2rem; }
+
+.unique-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  margin-top: 2.5rem;
+}
+
+.unique-card {
+  background: var(--off-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2.5rem 2.25rem;
+  transition: box-shadow .25s, transform .25s;
+}
+.unique-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.unique-icon { font-size: 2.25rem; display: block; margin-bottom: 1.25rem; }
+
+.unique-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.unique-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+/* ── Closing Reflection ──────────────────────────────────── */
+.hist-closing { padding: 7rem 2rem; background: var(--off-white); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+
+.hist-closing-inner { max-width: 980px; }
+
+.hist-closing-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2.5rem;
+}
+
+.hist-closing-cols p {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  line-height: 2;
+  font-style: italic;
+}
+
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .deity-grid { grid-template-columns: repeat(2, 1fr); }
-  .rec-grid   { grid-template-columns: repeat(2, 1fr); }
-  .tl-item    { grid-template-columns: 90px 44px 1fr; }
+  .deity-grid    { grid-template-columns: repeat(2, 1fr); }
+  .rec-grid      { grid-template-columns: repeat(3, 1fr); }
+  .tl-item       { grid-template-columns: 90px 44px 1fr; }
+  .unique-grid   { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .hist-intro-cols  { grid-template-columns: 1fr; gap: 1.5rem; }
-  .deity-grid       { grid-template-columns: 1fr; }
-  .jampanna-grid    { grid-template-columns: 1fr; gap: 2.5rem; }
-  .tl-left          { display: none; }
-  .tl-item          { grid-template-columns: 44px 1fr; }
-  .hist-intro       { padding: 4rem 1.25rem; }
-  .timeline-section { padding: 4.5rem 1.25rem; }
-  .jampanna-section { padding: 4rem 1.25rem; }
+  .hist-intro-cols    { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hist-closing-cols  { grid-template-columns: 1fr; gap: 1.5rem; }
+  .deity-grid         { grid-template-columns: 1fr; }
+  .jampanna-grid      { grid-template-columns: 1fr; gap: 2.5rem; }
+  .koya-grid          { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sacred-grid        { grid-template-columns: 1fr; }
+  .ritual-days        { grid-template-columns: 1fr; }
+  .unique-grid        { grid-template-columns: 1fr; }
+  .tl-left            { display: none; }
+  .tl-item            { grid-template-columns: 44px 1fr; }
+  .hist-intro         { padding: 4rem 1.25rem; }
+  .timeline-section   { padding: 4.5rem 1.25rem; }
+  .jampanna-section   { padding: 4rem 1.25rem; }
+  .koya-section       { padding: 4rem 1.25rem; }
+  .sacred-sites-section { padding: 4rem 1.25rem; }
+  .rituals-section    { padding: 4rem 1.25rem; }
+  .unique-section     { padding: 4rem 1.25rem; }
+  .hist-closing       { padding: 4rem 1.25rem; }
 }
 
 @media (max-width: 480px) {
-  .rec-grid { grid-template-columns: 1fr; }
+  .rec-grid { grid-template-columns: repeat(2, 1fr); }
 }
