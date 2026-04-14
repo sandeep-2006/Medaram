@@ -118,7 +118,7 @@
   background: var(--blue-pale);
   padding: 0.25rem 0.6rem;
   border-radius: 3px;
-  white-space: nowrap;
+  display: inline-block;
 }
 
 .tl-connector {
@@ -544,7 +544,7 @@
 }
 
 /* ── Closing Reflection ──────────────────────────────────── */
-.hist-closing { padding: 7rem 2rem; background: var(--off-white); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+.hist-closing { padding: 8rem 2rem 7rem; background: var(--off-white); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); margin-top: 5rem; }
 
 .hist-closing-inner { max-width: 980px; }
 

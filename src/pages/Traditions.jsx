@@ -28,7 +28,7 @@ const DETAILED_DAYS = [
       {
         subtitle: 'Sacred Purification at Kannepalli',
         text: "At Kannepalli, Kaka clan priests initiate the Jatara with Manda Melige — a ritual purifying the sanctum with sacred soil and installing a bamboo flagstaff. A rooster is hung at the village entrance to ward off evil spirits, ensuring the entire space is sanctified before Saralamma's ceremonial departure begins.",
-        img: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_1.png'
       },
       {
         subtitle: 'Secret Rites and Divine Possession',
@@ -38,27 +38,27 @@ const DETAILED_DAYS = [
       {
         subtitle: 'The journey from Kannepalli',
         text: "By evening, the possessed priest emerges carrying the goddess's insignia under a ceremonial umbrella. Following a grand Aarti, the procession moves rapidly toward Medaram. Devotees — including yellow-clad Shivasatties — offer jaggery and prostrate themselves on the ground, seeking blessings as the goddess travels toward the sacred Jampanna Vagu.",
-        img: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_3.png'
       },
       {
         subtitle: 'The Holy Dip of Purification',
         text: 'Before reaching the sacred altars, millions gather at Jampanna Vagu for a holy dip — a mandatory act of purification believed to wash away sins and cure physical ailments. The stream serves as the spiritual gateway, cleansing pilgrims before they enter the presence of the goddesses at Medaram.',
-        img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_4.jpg'
       },
       {
         subtitle: 'The Legend of Sacrifice',
         text: 'The stream is named after Jampanna — the son of Sammakka — who died fighting the Kakatiya army at this very spot. Tribal lore says the water turned red with his blood. Pilgrims offer prayers honoring his sacrifice, acknowledging the deep ancestral roots of the tribal resistance that gave rise to the Jatara.',
-        img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_5.jpg'
       },
       {
         subtitle: 'Crossing the Jampanna Vagu',
         text: "As the Kannepalli procession arrives, the possessed priest carries the goddess's insignia through the water. Women devoted to this practice — particularly those seeking blessings for children — sprinkle the sacred water on themselves. This crossing is a moment of intense fervor before the goddess is seated at the Medaram altars.",
-        img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80'
+        img: ''
       },
       {
         subtitle: 'The Groom\'s Departure from Punugondla',
         text: "From Punugondla village, Pagididda Raju begins his journey as a symbolic bridegroom. Dressed in festive attire, the deity is escorted by Penaka clan priests in a Shobha Yatra — a ceremonial procession marking the start of his 80-kilometre trek to Medaram to reunite with the Goddess Sammakka.",
-        img: 'https://images.unsplash.com/photo-1604028383870-1376e1a062cf?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_6.png'
       },
       {
         subtitle: 'The Sacred Trek and Insignia',
@@ -73,12 +73,12 @@ const DETAILED_DAYS = [
       {
         subtitle: 'The Journey of Govindaraju',
         text: 'Govindaraju — the husband of Saralamma — begins his sacred journey from Kondai village. Koya priests carry his traditional insignia through the forest, accompanied by rhythmic Dolu drumbeats and tribal dances. This trek signifies his loyal journey to reunite with the divine family gathering at Medaram.',
-        img: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_7.jpeg'
       },
       {
         subtitle: 'Arrival and Divine Reunion',
         text: "Upon reaching Medaram, Govindaraju's symbols are carried across the Jampanna Vagu for purification. He is installed on his designated Gaddelu alongside the other deities — representing the bravery of warriors who fought alongside Sammakka and Saralamma. His arrival completes the first phase of the sacred family's reunion.",
-        img: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80'
+        img: 'src/pages/Images/1_8.jpg'
       }
     ]
   },
