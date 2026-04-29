@@ -111,19 +111,14 @@ export default function Gallery() {
       </Fade>
 
       {/* ── ADD PHOTOS NOTE ──────────────────────────────── */}
-      <Fade>
+     <Fade>
         <div className="gallery-note container">
           <div className="note-box">
             <span>📸</span>
             <div>
-              <h4>Adding Your Own Photographs</h4>
+              <h4></h4>
               <p>
-                To populate the gallery with real photographs: place your images in 
-                <code>src/assets/gallery/</code>, import them into <code>Gallery.jsx</code>, 
-                and set the <code>src</code> property on each item. For best results, 
-                use landscape images at a 3:2 ratio. Freely licensed photographs of the 
-                Jathara are available on Wikimedia Commons — search for 
-                "Sammakka Saralamma Jatara".
+                
               </p>
             </div>
           </div>
